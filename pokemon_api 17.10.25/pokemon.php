@@ -1,6 +1,4 @@
 <?php
-// Display Pokémon stats fetched from the PokeAPI based on ?pokemon=NAME
-// Added: show evolution chain with images and base stats for each evolution
 
 function h($s){ return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
 
@@ -20,7 +18,6 @@ if ($raw === '') {
 $name = strtolower($raw);
 $apiName = urlencode($name);
 
-// fetch main pokemon data
 $pokemonUrl = "https://pokeapi.co/api/v2/pokemon/{$apiName}";
 $data = fetchJson($pokemonUrl);
 if ($data === null) {
@@ -40,17 +37,15 @@ foreach ($data['stats'] ?? [] as $s) {
     $stats[] = ['name' => $s['stat']['name'], 'value' => $s['base_stat']];
 }
 
-// fetch species to find evolution chain
 $speciesUrl = "https://pokeapi.co/api/v2/pokemon-species/{$apiName}";
 $speciesData = fetchJson($speciesUrl);
-$evolutions = []; // will hold species names in chain order
+$evolutions = [];
 
 if (is_array($speciesData) && isset($speciesData['evolution_chain']['url'])) {
     $evoChainUrl = $speciesData['evolution_chain']['url'];
     $chainData = fetchJson($evoChainUrl);
 
     if (is_array($chainData) && isset($chainData['chain'])) {
-        // traverse chain recursively
         $traverse = function($node) use (&$traverse, &$evolutions) {
             if (!isset($node['species']['name'])) return;
             $evolutions[] = $node['species']['name'];
@@ -64,13 +59,12 @@ if (is_array($speciesData) && isset($speciesData['evolution_chain']['url'])) {
     }
 }
 
-// remove duplicates and keep order, ensure current pokemon is included
+
 $evolutions = array_values(array_unique($evolutions));
 if (!in_array(strtolower($data['name']), $evolutions)) {
     array_unshift($evolutions, strtolower($data['name']));
 }
 
-// fetch details for each evolution species (sprite + stats)
 $evoDetails = [];
 foreach ($evolutions as $speciesName) {
     $url = "https://pokeapi.co/api/v2/pokemon/" . urlencode($speciesName);
