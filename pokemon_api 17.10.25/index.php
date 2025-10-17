@@ -6,9 +6,7 @@ $response = file_get_contents($url);
 
 $data = json_decode($response, true);
 
-
 $name = $data['name'];
-
 
 $sprite = $data['sprites']['front_default'];
 
