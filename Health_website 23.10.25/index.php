@@ -9,7 +9,7 @@
 <body>
   <header>
     <div class="left-section">
-      <img src="images/Logo.png" alt="Logo" class="logo" />
+      <img src="" alt="Logo" class="logo" />
       <div class="search-bar">
         <input type="text" placeholder="search bar" />
         <button aria-label="Search"></button>
