@@ -21,17 +21,17 @@
       <a href="index.php">Weather</a>
       <a href="index.php">Advice</a>
       <a href="index.php">Allergens</a>
-      <a href="index.php">Home Safety</a>
+      <a href="login.php">Home Safety</a>
     </nav>
-    <div class="account-settings">
-      <a href="login.php" class="account-link">My account</a>
-      <a href="login.php" aria-label="login" class="icon-btn login-link">
-        <svg height="24" width="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="8" r="4" stroke="white" stroke-width="2" fill="none"/>
-          <path d="M4 20c0-4 8-4 8-4s8 0 8 4" stroke="white" stroke-width="2" fill="none"/>
-        </svg>
-      </a>
-
+      <div class="account-settings">
+        <a href="login.php" class="account-link">My account</a>
+        <a href="login.php" aria-label="Login" class="icon-btn login-link">
+          <svg height="24" width="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="8" r="4" stroke="white" stroke-width="2" fill="none"/>
+            <path d="M4 20c0-4 8-4 8-4s8 0 8 4" stroke="white" stroke-width="2" fill="none"/>
+          </svg>
+        </a>
+      </div>
 
       <a href="settings.html" aria-label="Settings" class="icon-btn settings-link">
         <svg height="24" width="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
