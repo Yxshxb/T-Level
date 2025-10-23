@@ -9,4 +9,3 @@ echo '
   <label>Password: <input type="password" name="password" required></label><br>
   <button type="submit">Sign Up</button>
 </form>';
-
