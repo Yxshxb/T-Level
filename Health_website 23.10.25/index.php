@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Centered Menu Header with Carousel</title>
-  <link rel="stylesheet" href="stylesheets/style.css" />
+  <link rel='stylesheet' href='stylesheets/style.css'>
 </head>
 <body>
   <header>
@@ -17,15 +17,15 @@
     </div>
 
     <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="index.html">Weather</a>
-      <a href="index.html">Advice</a>
-      <a href="index.html">Allergens</a>
-      <a href="index.html">Home Safety</a>
+      <a href="index.php" class="active">Home</a>
+      <a href="index.php">Weather</a>
+      <a href="index.php">Advice</a>
+      <a href="index.php">Allergens</a>
+      <a href="index.php">Home Safety</a>
     </nav>
     <div class="account-settings">
-      <a href="../login_page/login.html" class="account-link">My account</a>
-      <a href="../login_page/login.html" aria-label="login" class="icon-btn login-link">
+      <a href="login.php" class="account-link">My account</a>
+      <a href="login.php" aria-label="login" class="icon-btn login-link">
         <svg height="24" width="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
           <circle cx="12" cy="8" r="4" stroke="white" stroke-width="2" fill="none"/>
           <path d="M4 20c0-4 8-4 8-4s8 0 8 4" stroke="white" stroke-width="2" fill="none"/>
